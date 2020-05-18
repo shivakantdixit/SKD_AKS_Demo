@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: firstwebapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: firstwebapp 
+    spec:
+      containers:
+        - name: firstwebapp 
+          image: skdcr.azurecr.io/firstwebapp
+          ports:
+          - containerPort: 80
